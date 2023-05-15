@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DigitalRebuildInvest</title>
+    <link rel="shortcut icon" type="image/png" href="myicon.png" />
+    <!-- leaflet css  -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <!-- leaflet javascript -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <!-- map container -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+
+<body>
+    <div id="mapid"></div>
+    <!-- script to create map -->
+    <script src="lefletmarker.js"></script>
+    <div style="position: fixed; bottom: 10px; right: 10px; z-index: 1000;">
+        <button id="ukr">Укр</button>
+        <button id="eng">Eng</button>
+    </div>
+    <!------------------------------ Chat-GPT---3.5-script-use -------------------->
+    <button id="toggle-chat">ChatGPT</button>
+
+    <div id="chat-window">
+        <h3 style="text-align: center;">ChatGPT-помічник</h3>
+        <p>Цей онлайн помічник відповідає на ваші запитання</p>
+        <p>та надає інформацію засобами штучного інтелекту.</p>
+        <div id="chat-response"></div>
+        <textarea id="chat-input" placeholder="Пишіть ваше запитання"></textarea>
+        <button onclick="sendMessage()"><b>Надіслати</b></button>
+        <button onclick="closeChat()" style="float: right;"><b>Закрити чат</b></button>
+    </div>
+    <script src="scriptgpd.js"></script>
+</body>
+
+</html>

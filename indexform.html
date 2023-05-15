@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/png" href="myicon.png" />
+    <title>DigitalRebuildInvestForm</title>
+    <link rel="stylesheet" type="text/css" href="styleform.css">
+
+</head>
+
+<body>
+
+    <body>
+        <div class="container">
+            <form id="payment-form" method="post">
+                <label for="customer_first_name">Ім'я:</label>
+                <input type="text" id="customer_first_name" name="customer_first_name" placeholder="Ваше ім'я" required>
+                <label for="customer_last_name">Прізвище:</label>
+                <input type="text" id="customer_last_name" name="customer_last_name" placeholder="Ваше прізвище" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Ваш email" required>
+                <label for="country">Країна:</label>
+                <select id="country" name="country" required style="padding: 5px; font-size: 16px; border: 2px solid #ccc; border-radius: 4px;">
+<option value="">Виберіть країну</option>
+<option value="AT"><span class="emoji-flag" style="margin-right: 5px;">🇦🇹</span> Австрія</option>
+<option value="BE"><span class="emoji-flag" style="margin-right: 5px;">🇧🇪</span> Бельгія</option>
+<option value="BG"><span class="emoji-flag" style="margin-right: 5px;">🇧🇬</span> Болгарія</option>
+<option value="CY"><span class="emoji-flag" style="margin-right: 5px;">🇨🇾</span> Кіпр</option>
+<option value="CZ"><span class="emoji-flag" style="margin-right: 5px;">🇨🇿</span> Чехія</option>
+<option value="DE"><span class="emoji-flag" style="margin-right: 5px;">🇩🇪</span> Німеччина</option>
+<option value="DK"><span class="emoji-flag" style="margin-right: 5px;">🇩🇰</span> Данія</option>
+<option value="EE"><span class="emoji-flag" style="margin-right: 5px;">🇪🇪</span> Естонія</option>
+<option value="ES"><span class="emoji-flag" style="margin-right: 5px;">🇪🇸</span> Іспанія</option>
+<option value="FI"><span class="emoji-flag" style="margin-right: 5px;">🇫🇮</span> Фінляндія</option>
+<option value="FR"><span class="emoji-flag" style="margin-right: 5px;">🇫🇷</span> Франція</option>
+<option value="GR"><span class="emoji-flag" style="margin-right: 5px;">🇬🇷</span> Греція</option>
+<option value="HR"><span class="emoji-flag" style="margin-right: 5px;">🇭🇷</span> Хорватія</option>
+<option value="HU"><span class="emoji-flag" style="margin-right: 5px;">🇭🇺</span> Угорщина</option>
+<option value="IE"><span class="emoji-flag" style="margin-right: 5px;">🇮🇪</span> Ірландія</option>
+<option value="IT"><span class="emoji-flag" style="margin-right: 5px;">🇮🇹</span> Італія</option>
+<option value="LT"><span class="emoji-flag" style="margin-right: 5px;">🇱🇹</span> Литва</option>
+<option value="LU"><span class="emoji-flag" style="margin-right: 5px;">🇱🇺</span> Люксембург</option>
+<option value="LV"><span class="emoji-flag" style="margin-right: 5px;">🇱🇻</span> Латвія</option>
+<option value="MT"><span class="emoji-flag" style="margin-right: 5px;">🇲🇹</span> Мальта</option>
+<option value="NL"><span class="emoji-flag" style="margin-right: 5px;">🇳🇱</span> Нідерланди</option>
+<option value="PL"><span class="emoji-flag" style="margin-right: 5px;">🇵🇱</span> Польща</option>
+<option value="PT"><span class="emoji-flag" style="margin-right: 5px;">🇵🇹</span> Португалія</option>
+<option value="RO"><span class="emoji-flag" style="margin-right: 5px;">🇷🇴</span> Румунія</option>
+<option value="SE"><span class="emoji-flag" style="margin-right: 5px;">🇸🇪</span> Швеція</option>
+<option value="SI"><span class="emoji-flag" style="margin-right: 5px;">🇸🇮</span> Словенія</option>
+<option value="SK"><span class="emoji-flag" style="margin-right: 5px;">🇸🇰</span> Словаччина</option>
+<option value="UA"><span class="emoji-flag" style="margin-right: 5px;">🇺🇦</span> Україна</option>
+
+                    </select>
+                <label class="amount">Сума:</label>
+                <input type="number" id="amount" name="amount" placeholder="Введіть сумму" min="1" required>
+                <label for="card-element">Картка оплати:</label>
+                <div id="card-element"></div>
+                <button type="submit" id="submit" onclick="window.location.href='success.html'">Заплатити</button>
+            </form>
+        </div>
+
+        <!-- Stripe JavaScript library -->
+        <script src="https://js.stripe.com/v3/"></script>
+        <script src="stripetestcard.js"></script>
+        <script src="main.js"></script>
+    </body>
+
+</html>
