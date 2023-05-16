@@ -12,7 +12,7 @@ function sendMessage() {
 
     if (message !== '') {
         // Вивести повідомлення про формулювання відповіді
-        chatResponse.innerHTML += '<p>Очікуйте, відповідь формулюється...1</p>';
+        chatResponse.innerHTML += '<p>Очікуйте, відповідь формулюється...11</p>';
 
         // Виконати запит до ChatGPT та отримати відповідь
         const apiKey = secrets.MY_API_KEY;
