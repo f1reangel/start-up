@@ -12,10 +12,10 @@ function sendMessage() {
 
     if (message !== '') {
         // Вивести повідомлення про формулювання відповіді
-        chatResponse.innerHTML += '<p>Очікуйте, відповідь формулюється...</p>';
+        chatResponse.innerHTML += '<p>Очікуйте, відповідь формулюється...1</p>';
 
         // Виконати запит до ChatGPT та отримати відповідь
-        const apiKey = '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';
+        const apiKey = process.env.MY_API_KEY;
         const apiUrl = 'https://api.openai.com/v1/chat/completions';
 
         const data = {
