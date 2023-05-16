@@ -15,7 +15,7 @@ function sendMessage() {
         chatResponse.innerHTML += '<p>Очікуйте, відповідь формулюється...1</p>';
 
         // Виконати запит до ChatGPT та отримати відповідь
-        const apiKey = process.env.MY_API_KEY;
+        const apiKey = secrets.MY_API_KEY;
         const apiUrl = 'https://api.openai.com/v1/chat/completions';
 
         const data = {
